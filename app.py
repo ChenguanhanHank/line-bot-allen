@@ -128,7 +128,7 @@ def handle_message(event):
         subscription_key = '10db674aaf0645d887984e720db6811c' 
         #中翻英api endpoint
         endpoint = 'https://api.cognitive.microsofttranslator.com/'
-        path = 'westus2'
+        path = '/translate?api-version=3.0'
 
         params = '&to=de&to=zh-Hant'
         constructed_url = endpoint + path + params
