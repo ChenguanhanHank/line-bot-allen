@@ -77,10 +77,10 @@ def handle_message(event):
 
 #圖片轉敘述api
         # Set API key.
-        subscription_key = 'key'
+        subscription_key = 'aa179555a2944223b0d35eba9649bde1'
 
         # Set endpoint.
-        endpoint = 'endpoint'
+        endpoint = 'https://hank-vision.cognitiveservices.azure.com/'
 
         # Call API
         computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
