@@ -77,10 +77,10 @@ def handle_message(event):
             return 0
 
         # 圖片敘述 API key.
-        subscription_key = '圖片敘述 API key'
+        subscription_key = 'aa179555a2944223b0d35eba9649bde1'
 
         # 圖片敘述 API endpoint.
-        endpoint = '圖片敘述 API endpoint'
+        endpoint = 'https://hank-vision.cognitiveservices.azure.com/'
 
         # Call API
         computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
@@ -104,9 +104,9 @@ def handle_message(event):
                 textlist.append(caption.text)
                 
         #抓取關鍵字 api
-        key = "text_analytics api"
+        key = "ba069a083c4b4104be2de1fe7718639c"
         #抓取關鍵字 endpoint
-        endpoint = "text_analytics endpoint"
+        endpoint = "https://uderstanding.cognitiveservices.azure.com/"
 
         text_analytics_client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
         documents = ['{}'.format(caption.text)]
@@ -125,11 +125,10 @@ def handle_message(event):
         
         
         #中翻英api key
-        subscription_key = '中翻英api key' 
+        subscription_key = '10db674aaf0645d887984e720db6811c' 
         #中翻英api endpoint
-        endpoint = '中翻英api endpoint'
-        path = '/translate?api-version=3.0'
-
+        endpoint = 'https://api.cognitive.microsofttranslator.com/'
+        path = 'westus2'
 
         params = '&to=de&to=zh-Hant'
         constructed_url = endpoint + path + params
@@ -181,4 +180,4 @@ def handle_message(event):
         
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run()
